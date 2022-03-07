@@ -1,24 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 
 const todoList = [];
 
-function TodoInsert() {
-    const inputTodo = useState("");
-
-    function handleSubmit() {
-        alert('input : ' + inputTodo);
-    }
+export default function TodoInsert() {
+    const [inputTodo, updateText] = useState('');
+    const List = [];
+    const handleSubmit = useCallback(() => {
+        alert(inputTodo);
+        todoList.push(inputTodo);
+        List = todoList.map((todo) =>
+            <li key={todo.toString()}>
+                {todo}
+            </li>
+        );
+    });
 
     return (
-        <form onSubmit={handleSubmit}>
+        <>
             <h1>Hello, todo!</h1>
-            <label>
-                Todo : 
-                <input type="text" value={inputTodo}/>
-            </label>
-            <input type="submit" value="Add" />
-        </form>
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Todo : 
+                    <input type="text" onChange={e => updateText(e.target.value)} />
+                </label>
+                <button>Add</button>
+            </form>
+            <ul>{List}</ul>
+        </>
     );
 }
-
-export default TodoInsert
