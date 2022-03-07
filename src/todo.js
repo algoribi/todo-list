@@ -1,18 +1,12 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 
-const todoList = [];
+const todoList = ["eat rice", "play game"];
 
 export default function TodoInsert() {
     const [inputTodo, updateText] = useState('');
-    const List = [];
     const handleSubmit = useCallback(() => {
         alert(inputTodo);
-        todoList.push(inputTodo);
-        List = todoList.map((todo) =>
-            <li key={todo.toString()}>
-                {todo}
-            </li>
-        );
+        todoList.push(inputTodo.toString());
     });
 
     return (
@@ -25,7 +19,6 @@ export default function TodoInsert() {
                 </label>
                 <button>Add</button>
             </form>
-            <ul>{List}</ul>
         </>
     );
 }
