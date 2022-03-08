@@ -2,8 +2,9 @@ body {
     background-color: rgb(183, 187, 226);
 }
 
-#mainbox {
+#App {
     width: 1000px;
+    border-radius: 50px;
     margin: 0px auto;
     display: flex;
     flex-direction: column;
@@ -11,8 +12,58 @@ body {
     background-color: rgb(255, 247, 251);
 }
 
-#maintitle {
-    font-size: 43px;
+#title_name {
+    font-size: 50px;
     text-shadow: 1px 1px 1px rgb(90, 25, 58),
                 2px 2px 1px rgb(190, 117, 154);
+}
+
+#input-todo {
+    width: 500px;
+    height: 38px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#input-todo-button {
+    font-size: 18px;
+    margin-left: 15px;
+    background-color: rgb(203, 183, 235);
+    border-radius: 7px;
+    width: 100px;
+    height: 38px;
+    box-shadow: 1px 1px 1px rgb(92, 54, 128),
+    2px 2px 1px rgb(124, 105, 144);
+}
+
+#input-todoBox {
+    margin-bottom: 25px;
+}
+
+#print-todoBox {
+    font-size: 20px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+input[type=checkbox] {
+    transform : scale(1.5);
+}
+
+label {
+    margin-left: 10px;
+}
+
+#print-todo-button {
+    margin-left: 10px;
+    background-color: rgb(223, 219, 231);
+    border-radius: 5px;
+    transform : scale(1.1);
+    box-shadow: 1px 1px 1px rgb(140, 109, 168),
+}
+
+.check-todo {
+    /* color :rgb(202, 202, 202);
+    font-style: italic;
+    text-decoration: line-through; */
 }

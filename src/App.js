@@ -1,13 +1,12 @@
 import './index.css';
+import Header from './components/Header';
+import TodoList from './components/TodoList';
 
-function App() {
+export default function App() {
   return (
-    <div id="mainbox">
-      <h1 id="maintitle">Todo-List</h1>
-      {/* 입력 */}
-      {/* 리스트 보이는 부분 */}
+    <div id="App">
+      <Header />
+      <TodoList />
     </div>
   );
 }
-
-export default App;
