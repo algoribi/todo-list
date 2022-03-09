@@ -50,11 +50,7 @@ input[type=checkbox] {
     transform : scale(1.5);
 }
 
-label {
-    margin-left: 10px;
-}
-
-#print-todo-button {
+.delete-todo-button {
     margin-left: 10px;
     background-color: rgb(223, 219, 231);
     border-radius: 5px;
@@ -62,8 +58,13 @@ label {
     box-shadow: 1px 1px 1px rgb(140, 109, 168),
 }
 
-.check-todo {
-    /* color :rgb(202, 202, 202);
+.print-uncheck-todo {
+    margin-left: 10px;
+}
+
+.print-check-todo {
+    margin-left: 10px;
+    color :rgb(202, 202, 202);
     font-style: italic;
-    text-decoration: line-through; */
+    text-decoration: line-through;
 }

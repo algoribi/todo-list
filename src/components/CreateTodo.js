@@ -1,19 +1,17 @@
 import React, {useState} from 'react';
-import '../index.css';
 
 export default function CreateTodo({ todoList, setTodoList }) {
     const [todo, setTodo] = useState("");
 
-    const createTodo = e => {
+    const createTodo = () => {
         alert(`'${todo}'를 todo에 추가했습니다.`);
         setTodoList(todoList.concat({
             id: todoList.length,
-            text: todo,
-            check: false
+            text: todo
         }));
         setTodo("");
     }
-
+    
     return (
         <div id="input-todoBox">
             <input
@@ -24,6 +22,11 @@ export default function CreateTodo({ todoList, setTodoList }) {
                 value={todo}
                 onChange={(e) => {
                     setTodo(e.target.value);
+                }}
+                onKeyPress={(e) => {
+                    if (e.key === 'Enter') {
+                        createTodo();
+                    }
                 }}
             />
             <button onClick={createTodo} id="input-todo-button">
