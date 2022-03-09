@@ -11,11 +11,11 @@ export default function PrintTodo({ todo, deleteTodo }) {
         setCheckState(!checkState);
     };
 
-    return (
-        <div id="print-todoBox">
+    return ( 
+        <div className="print-todo-item">
             <input type="checkbox" className="print-checkbox" name="print-checkbox" onChange={() => changeCheckBox(todo)}/>
             <span className={checkState ? "print-check-todo" : "print-uncheck-todo"}>{todo.text}</span>
-            <button className="delete-todo-button" onClick={() => deleteTodo(todo)}>Delete</button>
+            <button className="delete-todo-button" onClick={() => deleteTodo(todo)}>❌</button>
         </div>
     );
 }

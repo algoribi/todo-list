@@ -12,7 +12,7 @@ export default function TodoList() {
     };
 
     return (
-        <div>
+        <div id="todo-list-box">
             <CreateTodo todoList={todoList} setTodoList={setTodoList} />
             {todoList.map(todo => (
                 <PrintTodo todo={todo} deleteTodo={deleteTodo} key={todo.id} />
