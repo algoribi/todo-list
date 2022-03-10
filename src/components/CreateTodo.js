@@ -4,14 +4,18 @@ export default function CreateTodo({ todoList, setTodoList }) {
     const [todo, setTodo] = useState("");
 
     const createTodo = () => {
-        if (todo === "") {
+        const todoText = todo;
+
+        if (todoText === "") {
             alert(`내용을 입력해주세요!`);
         } else {
-            alert(`'${todo}'를 todo에 추가했습니다.`);
-            setTodoList(todoList.concat({
+            alert(`'${todoText}'를 todo에 추가했습니다.`);
+            const newTodoList = [...todoList, {
                 id: todoList.length,
-                text: todo
-            }));
+                text: todoText,
+                complete: false
+            }];
+            setTodoList(newTodoList);
             setTodo("");
         }
     }
