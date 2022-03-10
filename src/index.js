@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoInsert from './todo';
+import App from './App';
 
 ReactDOM.render(
-  <TodoInsert />,
+  <App />,
   document.getElementById('root')
 );

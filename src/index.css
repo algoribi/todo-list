@@ -1,0 +1,86 @@
+body {
+    background-color: rgb(183, 187, 226);
+}
+
+#App {
+    width: 1000px;
+    border-radius: 50px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 247, 251);
+}
+
+#title_name {
+    font-size: 50px;
+    text-shadow: 1px 1px 1px rgb(90, 25, 58),
+                2px 2px 1px rgb(190, 117, 154);
+}
+
+#input-todo {
+    width: 500px;
+    height: 38px;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#input-todo-button {
+    font-size: 18px;
+    margin-left: 15px;
+    background-color: rgb(203, 183, 235);
+    border-radius: 7px;
+    width: 100px;
+    height: 38px;
+    box-shadow: 1px 1px 1px rgb(92, 54, 128),
+    2px 2px 1px rgb(124, 105, 144);
+    cursor: pointer;
+}
+
+#input-todoBox {
+    margin-bottom: 30px;
+}
+
+#todo-list-box {
+    margin-bottom: 30px;
+}
+
+.print-todo-item {
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgb(92, 54, 128);
+    padding: 10px;
+}
+
+.print-todo-item:hover .delete-todo-button {
+    opacity: 1;
+}
+
+.delete-todo-button {
+    opacity: 0;
+    margin-left: 20px;
+    background-color: rgb(223, 219, 231);
+    border-radius: 5px;
+    transform : scale(1.1);
+    box-shadow: 1px 1px 1px rgb(140, 109, 168);
+    cursor: pointer;
+}
+
+.print-uncheck-todo {
+    margin-left: 20px;
+}
+
+.print-check-todo {
+    margin-left: 20px;
+    color :rgb(202, 202, 202);
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+.print-checkbox {
+    transform: scale(1.5);
+    cursor: pointer;
+}
